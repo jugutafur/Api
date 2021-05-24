@@ -1,6 +1,6 @@
 package com.prueba.demo.Domain;
 
-public class Product_Services {
+public class ProductServices {
     private int id;
     private String image;
     private String title;

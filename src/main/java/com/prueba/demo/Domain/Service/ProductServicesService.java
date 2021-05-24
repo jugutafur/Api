@@ -1,20 +1,19 @@
 package com.prueba.demo.Domain.Service;
 
-import com.prueba.demo.Domain.Product_Services;
-import com.prueba.demo.Domain.Repository.Product_ServicesRepository;
+import com.prueba.demo.Domain.ProductServices;
+import com.prueba.demo.Domain.Repository.ProductServicesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
-public class Product_ServicesService {
+public class ProductServicesService {
 
     @Autowired
-    private Product_ServicesRepository product_servicesRepository;
+    private ProductServicesRepository product_servicesRepository;
 
-    public List<Product_Services> getAll(){return product_servicesRepository.getAll();}
+    public List<ProductServices> getAll(){return product_servicesRepository.getAll();}
 
     /*
     public Optional<Product_Services> getProduct_Services(int id){return product_servicesRepository.getProduct_Services(id);}

@@ -1,7 +1,7 @@
 package com.prueba.demo.Persistence.Mapper;
 
-import com.prueba.demo.Domain.Product_Services;
-import com.prueba.demo.Persistence.Entity.Productos_Servicios;
+import com.prueba.demo.Domain.ProductServices;
+import com.prueba.demo.Persistence.Entity.ProductosServicios;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -10,7 +10,7 @@ import org.mapstruct.Mappings;
 import java.util.List;
 
 @Mapper(componentModel = "spring")
-public interface Product_ServicesMapper {
+public interface ProductServicesMapper {
 
     @Mappings({
             @Mapping(source = "imagen", target = "image"),
@@ -18,9 +18,9 @@ public interface Product_ServicesMapper {
             @Mapping(source = "precio", target = "price"),
             @Mapping(source = "descripcion", target = "description")
     })
-    Product_Services toProduct_Services (Productos_Servicios productos_servicios);
-    List<Product_Services> toProduct_Services(List<Productos_Servicios> productos_servicios);
+    ProductServices toProduct_Services (ProductosServicios productos_servicios);
+    List<ProductServices> toProduct_Services(List<ProductosServicios> productos_servicios);
 
     @InheritInverseConfiguration
-    Productos_Servicios toProductos_Servicios(Product_Services product_services);
+    ProductosServicios toProductos_Servicios(ProductServices product_services);
 }
