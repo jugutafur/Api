@@ -13,7 +13,6 @@ import java.util.List;
 public interface KhitMapper {
 
     @Mappings({
-
             @Mapping(source = "titulo", target = "title"),
             @Mapping(source = "descripcion", target = "description"),
             @Mapping(source = "precio", target = "price" ),

@@ -14,44 +14,18 @@ public class Productos_Servicios {
     private Integer precio;
     private String descripcion;
 
+    public Integer getId() { return id; }
+    public void setId(Integer id) { this.id = id; }
 
-    public Integer getId() {
-        return id;
-    }
+    public String getImagen() { return imagen; }
+    public void setImagen(String imagen) { this.imagen = imagen; }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    public String getTitulo() { return titulo; }
+    public void setTitulo(String titulo) { this.titulo = titulo; }
 
-    public String getImagen() {
-        return imagen;
-    }
+    public Integer getPrecio() { return precio; }
+    public void setPrecio(Integer precio) { this.precio = precio; }
 
-    public void setImagen(String imagen) {
-        this.imagen = imagen;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public Integer getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(Integer precio) {
-        this.precio = precio;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
+    public String getDescripcion() { return descripcion; }
+    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
 }

@@ -1,4 +1,3 @@
-
 package com.prueba.demo.Persistence.Entity;
 
 import javax.persistence.*;

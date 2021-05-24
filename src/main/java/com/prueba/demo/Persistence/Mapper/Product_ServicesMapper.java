@@ -7,6 +7,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring")
 public interface Product_ServicesMapper {
 
@@ -17,6 +19,7 @@ public interface Product_ServicesMapper {
             @Mapping(source = "descripcion", target = "description")
     })
     Product_Services toProduct_Services (Productos_Servicios productos_servicios);
+    List<Product_Services> toProduct_Services(List<Productos_Servicios> productos_servicios);
 
     @InheritInverseConfiguration
     Productos_Servicios toProductos_Servicios(Product_Services product_services);
