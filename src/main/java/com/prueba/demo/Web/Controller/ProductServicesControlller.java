@@ -13,17 +13,22 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/Product_Services")
-public class Product_ServicesControlller {
+public class ProductServicesControlller {
 
     @Autowired
-    private ProductServicesService product_servicesService;
+    private ProductServicesService productservicesService;
 
-    @GetMapping("/todosProducts_Services")
+    @GetMapping("/Nene")
+    public String hola(){return "desde la otra vetana de productos";}
+
+    @GetMapping("/todosProductsServices")
     @ApiOperation("Get all Products Services")
-    @ApiResponse(code = 200, message = "muy bien")
-    public List<ProductServices> getAll(){return product_servicesService.getAll();}
+    @ApiResponse(code = 200, message = "ook babay")
 
+
+    public List<ProductServices> getAll(){return productservicesService.getAll();}
     /*
+
     @GetMapping("/Products_Services/{item}")
     @ApiOperation("Get only one product_Service")
     @ApiResponse(code = 200, message = "muy bien")

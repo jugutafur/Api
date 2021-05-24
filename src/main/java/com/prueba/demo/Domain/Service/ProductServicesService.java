@@ -11,9 +11,9 @@ import java.util.List;
 public class ProductServicesService {
 
     @Autowired
-    private ProductServicesRepository product_servicesRepository;
+    private ProductServicesRepository productservicesRepository;
 
-    public List<ProductServices> getAll(){return product_servicesRepository.getAll();}
+    public List<ProductServices> getAll(){return productservicesRepository.getAll();}
 
     /*
     public Optional<Product_Services> getProduct_Services(int id){return product_servicesRepository.getProduct_Services(id);}

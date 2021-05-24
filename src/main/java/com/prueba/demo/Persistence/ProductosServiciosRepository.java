@@ -11,19 +11,19 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class Productos_ServiciosRepository implements ProductServicesRepository {
+public class ProductosServiciosRepository implements ProductServicesRepository {
 
     @Autowired
-    private ProductosServiciosCrudRepository productos_serviciosCrudRepository;
+    private ProductosServiciosCrudRepository productosserviciosCrudRepository;
 
     @Autowired
-    private ProductServicesMapper product_servicesMapper;
+    private ProductServicesMapper productservicesMapper;
 
 
     @Override
     public List<ProductServices> getAll() {
-        List<ProductosServicios> productos_servicios= (List<ProductosServicios>) productos_serviciosCrudRepository.findAll();
-        return product_servicesMapper.toProduct_Services(productos_servicios);
+        List<ProductosServicios> productosservicios= (List<ProductosServicios>) productosserviciosCrudRepository.findAll();
+        return productservicesMapper.toProductServices(productosservicios);
     }
 
     /*

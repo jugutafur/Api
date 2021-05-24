@@ -18,9 +18,9 @@ public interface ProductServicesMapper {
             @Mapping(source = "precio", target = "price"),
             @Mapping(source = "descripcion", target = "description")
     })
-    ProductServices toProduct_Services (ProductosServicios productos_servicios);
-    List<ProductServices> toProduct_Services(List<ProductosServicios> productos_servicios);
+    ProductServices toProductServices (ProductosServicios productosservicios);
+    List<ProductServices> toProductServices(List<ProductosServicios> productosservicios);
 
     @InheritInverseConfiguration
-    ProductosServicios toProductos_Servicios(ProductServices product_services);
+    ProductosServicios toProductosServicios(ProductServices productservices);
 }

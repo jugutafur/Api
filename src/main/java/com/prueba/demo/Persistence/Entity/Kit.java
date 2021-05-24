@@ -38,7 +38,6 @@ public class Kit {
     public Integer getPrecio() {
         return precio;
     }
-
     public void setPrecio(Integer precio) {
         this.precio = precio;
     }
@@ -46,7 +45,6 @@ public class Kit {
     public String getImagen() {
         return imagen;
     }
-
     public void setImagen(String imagen) {
         this.imagen = imagen;
     }
