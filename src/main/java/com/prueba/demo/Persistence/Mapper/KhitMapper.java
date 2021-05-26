@@ -11,7 +11,6 @@ import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface KhitMapper {
-
     @Mappings({
             @Mapping(source = "titulo", target = "title"),
             @Mapping(source = "descripcion", target = "description"),

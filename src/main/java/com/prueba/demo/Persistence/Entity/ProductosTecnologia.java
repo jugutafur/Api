@@ -3,9 +3,8 @@ package com.prueba.demo.Persistence.Entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "productos_servicios")
-public class ProductosServicios {
-
+@Table(name = "productos_tecnologia")
+public class ProductosTecnologia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

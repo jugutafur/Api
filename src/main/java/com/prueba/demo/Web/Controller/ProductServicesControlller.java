@@ -12,20 +12,18 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Product_Services")
+@RequestMapping("/Servicios")
 public class ProductServicesControlller {
 
     @Autowired
     private ProductServicesService productservicesService;
 
-    @GetMapping("/Nene")
-    public String hola(){return "desde la otra vetana de productos";}
+    @GetMapping("/test")
+    public String hola(){return "ventana de prueba desde Pservicios";}
 
-    @GetMapping("/todosProductsServices")
+    @GetMapping("/todos")
     @ApiOperation("Get all Products Services")
     @ApiResponse(code = 200, message = "ook babay")
-
-
     public List<ProductServices> getAll(){return productservicesService.getAll();}
     /*
 

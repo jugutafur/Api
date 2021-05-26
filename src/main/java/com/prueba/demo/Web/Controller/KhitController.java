@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/Khits")
+@RequestMapping("/Kits")
 public class KhitController {
 
     @Autowired
