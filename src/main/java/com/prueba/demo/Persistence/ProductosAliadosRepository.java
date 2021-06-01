@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class ProductosAliadosRepository implements ProductsPartnerRepository {
@@ -24,5 +25,15 @@ public class ProductosAliadosRepository implements ProductsPartnerRepository {
     public List<ProductsPartner> getAll() {
         List<ProductosAliados> productosAliados=(List<ProductosAliados>) productosAliadosCrudRepository.findAll();
         return productsPartnerMapper.toProductsPartner(productosAliados);
+    }
+
+    @Override
+    public Optional<ProductsPartner> getRegister(int id) {
+        return productosAliadosCrudRepository.findById(id).map(productosAliados -> productsPartnerMapper.toProductsPartner(productosAliados));
+    }
+
+    @Override
+    public String getText(int id) {
+        return "mensaje de prueba de metodo productosAliados=  "+ id;
     }
 }

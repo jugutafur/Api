@@ -15,11 +15,7 @@ public class KhitService {
     private KhitRepository khitRepository;
 
     public List<Khit> getAll(){ return khitRepository.getAll(); }
-    public Optional<Khit> getRegister(int KhitId){ return khitRepository.getRegister(KhitId); }
-
-      /*
-    public List<Khit> ShowTitle(String title){ return khitRepository.ShowTitle(title); }
-
-     */
+    public Optional<Khit> getRegister(int id){ return khitRepository.getRegister(id); }
+    public String getOnlyOney(int id){ return khitRepository.getOnlyOney(id);}
 }
 

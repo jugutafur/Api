@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class ProductosHogarRepository implements ProductsHomeRepository {
@@ -24,5 +25,15 @@ public class ProductosHogarRepository implements ProductsHomeRepository {
     public List<ProductsHome> getAll() {
         List<ProductosHogar> productosHogar=(List<ProductosHogar>) productosHogarCrudRepository.findAll();
         return productsHomeMapper.totoProductsHome(productosHogar);
+    }
+
+    @Override
+    public Optional<ProductsHome> getRegister(int id) {
+        return productosHogarCrudRepository.findById(id).map(productosHogar -> productsHomeMapper.toProductsHome(productosHogar));
+    }
+
+    @Override
+    public String getText(int id) {
+        return  "texto de ProductsHome = "+ id;
     }
 }

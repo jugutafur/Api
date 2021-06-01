@@ -6,12 +6,8 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface KitCrudRepository extends CrudRepository<Kit, Integer> {
-
 /*
-
-    List<Kit> findByIdTitulo(String titulo);
+    List<Kit> findByTitulo(int titulo);
 
  */
-
-
 }

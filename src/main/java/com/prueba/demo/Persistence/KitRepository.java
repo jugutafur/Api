@@ -21,22 +21,6 @@ public class KitRepository implements KhitRepository {
     @Autowired
     private KhitMapper khitMapper;
 
-    /*
-    1  VER VIDEO 23
-    public List<Kit> getTodos(){
-        return (List<Kit>) kitCrudRepository.findAll();
-    }
-
-    2
-    public List<Kit> Mostrartitulos(String titulo){
-        return kitCrudRepository.findByIdTitulo(titulo);
-    }
-
-    3
-    public Optional<Kit> getRegistro(int id){
-        return kitCrudRepository.findById(id);
-    }
-    */
 
     @Override
     public List<Khit> getAll() {
@@ -44,18 +28,14 @@ public class KitRepository implements KhitRepository {
         return khitMapper.toKhits(Kits);
     }
 
-    /*
     @Override
-    public List<Khit> ShowTitle(String title) {
-        List<Kit> khits= kitCrudRepository.findByIdTitulo(title);
-        return khitMapper.toKhits(khits);
+    public Optional<Khit> getRegister(int id) {
+        return kitCrudRepository.findById(id).map(kit -> khitMapper.toKhit(kit));
     }
 
-     */
-
     @Override
-    public Optional<Khit> getRegister(int KhitId) {
-        return kitCrudRepository.findById(KhitId).map(kit -> khitMapper.toKhit(kit));
+    public String getOnlyOney(int id) {
+        return "mensaje de prueba de metodo kit=  "+ id;
     }
 }
 

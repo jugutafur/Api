@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class ProductosMueblesRepository implements ProductsFurnitureRepository {
@@ -24,5 +25,15 @@ public class ProductosMueblesRepository implements ProductsFurnitureRepository {
     public List<ProductsFurniture> getAll() {
         List<ProductosMuebles> productosMuebles=(List<ProductosMuebles>) productsFurnitureCrudRepository.findAll();
         return productsFurnitureMapper.toProductsFurniture(productosMuebles);
+    }
+
+    @Override
+    public Optional<ProductsFurniture> getRegister(int id) {
+        return productsFurnitureCrudRepository.findById(id).map(productosMuebles -> productsFurnitureMapper.toProductsFurniture(productosMuebles));
+    }
+
+    @Override
+    public String getText(int id) {
+        return "texto de ProductsFurniture = "+ id;
     }
 }

@@ -28,19 +28,19 @@ public class KhitController {
         return khitService.getAll();
     }
 
-    /*
-    public List<Khit> ShowTitle(String title){
-        return khitService.ShowTitle(title);
-    }
-
-     */
-
-    @GetMapping("/ok/{este}")
+    @GetMapping("{este}")
     @ApiOperation("Get only item")
     @ApiResponse(code = 200, message = "super")
     public Optional<Khit> getRegister(
             @ApiParam(value = "obtine un solo elemento", required = true, example = "3")
-            @PathVariable("este") int KhitId){
-        return khitService.getRegister(KhitId);
+            @PathVariable("este") int id){
+        return khitService.getRegister(id);
+    }
+
+    @GetMapping("prueba{otro}")
+    public String getOnlyOney(
+            @ApiParam(value = "Obtiene un solo elemento", required = true, example = "4")
+            @PathVariable("otro") int id ){
+        return khitService.getOnlyOney(id);
     }
 }
